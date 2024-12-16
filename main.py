@@ -33,6 +33,7 @@ def verify(request: Request):
 
 
 FB_ACCESS_TOKEN = os.environ.get("FB_ACCESS_TOKEN") or False
+logger.info(f"FB_ACCESS_TOKEN: {FB_ACCESS_TOKEN}")
 
 if not FB_ACCESS_TOKEN:
     raise BaseException("Invalid access token")
